@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JSON Table Display</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+</head>
+<body>
+    <h1>Click below to view the G-85 members details</h1>
+    <button id="showButton">Show Details</button>
+    <table id="dataTable" style="display: none;">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Roll No.</th>
+                <th>Phone No</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody id="dataBody">
+        </tbody>
+    </table>
+    <script>
+        var jData = [
+            {"Name": "Sudhamsh", "Roll No.": "22BD1A1210", "Phone No.": 8340921220, "Email": "sudhamsh@gmail.com" },
+            { "Name": "Akshita", "Roll No.": "22BD1A1234", "Phone No.": 9391124533, "Email": "akshitamondal6@gmail.com" },
+            { "Name": "Suhani", "Roll No.": "22BD1A1209", "Phone No.": 9959557304, "Email": "bandisuhanipatel@gmail.com" },
+            { "Name": "Rahul", "Roll No.": "22BD1A1229", "Phone No.": 9618058457, "Email": "domenictorreado@gmail.com" },
+            { "Name": "Yeshwanth", "Roll No.": "22BD1A1236", "Phone No.": 8074494363, "Email": "yashmanthri19@gmail.com" },
+            { "Name": "Lalith", "Roll No.": "22BD1A1240", "Phone No.": 9391975052, "Email": "mlsrinandan@gmail.com" },
+        ];
+
+        function showData() {
+            var table = document.getElementById("dataTable");
+            var dataBody = document.getElementById("dataBody");
+
+            // Clear existing table data
+            dataBody.innerHTML = '';
+
+            // Populate the table with JSON data
+            jData.forEach(function (item) {
+                var row = document.createElement("tr");
+                Object.keys(item).forEach(function (key) {
+                    var cell = document.createElement("td");
+                    cell.textContent = item[key];
+                    row.appendChild(cell);
+                });
+                dataBody.appendChild(row);
+            });
+
+            table.style.display = "table";
+        }
+
+        var button = document.getElementById("showButton");
+        button.addEventListener("click", showData);
+    </script>
+</body>
+</html>

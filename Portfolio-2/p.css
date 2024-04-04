@@ -1,0 +1,40 @@
+.custom-hr {
+    border: none; 
+    height: 45px; 
+    background-color: rgb(161, 65, 65);
+    position: relative;
+    top: 375px;
+    /* right: 2.3vw; */
+    z-index: 1;
+    /* width: fit-content; */
+}
+
+.frame {
+    border: 3px solid #000;
+    background-color: rgb(208, 243, 231);
+    /* padding: 30px; */
+    padding-top: 1px;
+    width: 80vh; 
+    margin: 0 auto; 
+    box-sizing: border-box; 
+}
+.nn
+{
+    margin-left: 40px;
+}
+
+.circle-img {
+    border-radius: 50%; 
+    overflow: hidden; 
+    width: 300px; 
+    height: 300px; 
+    margin: 0 auto;
+    z-index: 2;
+    position: relative;
+}
+
+.circle-img img {
+    width: 115%; 
+    height: auto; 
+    display: block;
+}
